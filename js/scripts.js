@@ -7,12 +7,13 @@ console.log(beeping)
 
 function printer (x, y)
 {
-    for (i = 0; i < x; i++)
+    for (i = 0; i < (x + 1); i++)
     {
         let z = i.toString();
         for (h = 0; h < z.length; h++)
         {
         d = z.charAt(h);
+        nope = 0;
             if (d === ("1") && d!==(0))
             {
                 y += ("beep")
@@ -20,8 +21,9 @@ function printer (x, y)
             }
             else
             {
-
+                nope += 1;
             }
+        y += (z)
         }
     }
   return y;

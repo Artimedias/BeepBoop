@@ -75,3 +75,41 @@ Expected Result BeepBeepBeep
 Test Failed
 Reason: 11 has two ones, so it logs two beeps
 Solution: Add a break to the loop so that it only logs 1
+
+Test 4: If the number isn't a 1, printer should print it out.
+
+Code:
+
+input = 12;
+beeping = ("");
+beeping = printer(input, beeping);
+console.log(beeping)
+
+function printer (x, y)
+{
+    for (i = 0; i < (x + 1); i++)
+    {
+        let z = i.toString();
+        for (h = 0; h < z.length; h++)
+        {
+        d = z.charAt(h);
+        nope = 0;
+            if (d === ("1") && d!==(0))
+            {
+                y += ("beep")
+                break;
+            }
+            else
+            {
+                nope += 1;
+            }
+        y += (z)
+        }
+    }
+  return y;
+}
+
+Expected Result: beep23456789beepbeepbeep
+Test Failed
+Reason: Stops running 1 time early
+Solution: Have i run an extra time
