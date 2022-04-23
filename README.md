@@ -38,3 +38,40 @@ Expected Result: Beep Beep Beep Beep
 Test Failed
 Reason: For loop isn't starting 
 Solution: For loop was facing the wrong way
+
+Test 3: Printer should only return a beep if it's on a digit that has a 1
+
+Code:
+
+input = 12;
+beeping = ("");
+beeping = printer(input, beeping);
+console.log(beeping)
+
+function printer (x, y)
+{
+    for (i = 0; i < x; i++)
+    {
+        let z = i.toString();
+        for (h = 0; h < z.length; h++)
+        {
+        d = z.charAt(h);
+            if (d === ("1") && d!==(0))
+            {
+                y += ("beep")
+                break;
+            }
+            else
+            {
+
+            }
+        }
+    }
+  return y;
+}
+
+
+Expected Result BeepBeepBeep
+Test Failed
+Reason: 11 has two ones, so it logs two beeps
+Solution: Add a break to the loop so that it only logs 1
