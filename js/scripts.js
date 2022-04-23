@@ -1,11 +1,13 @@
-number = 3999;
-string = ("");
+//biz
+
+
 console.log(nums(number, string));
 function nums(a, b)
 {
 let c = a;
     for(i = 0; i < (a); i++)
     {
+      
         if (c > 3999) 
         {
             b = ("Error: Number is beyond the limit of roman numeral")
@@ -83,3 +85,35 @@ let c = a;
     }
     return b;
 }
+
+function isAnumber (thing)
+{
+  if (isNaN(number)===false)
+  {
+    return;
+  }
+  else
+  {
+    thing = "Fail"
+    return thing;
+  }
+}
+
+//user
+
+$(document).ready(function() {
+  $("#formOne").submit(function(event) {
+
+    
+
+    event.preventDefault();
+    const number = $("input#number").val();
+    let string = ("");
+
+    string = (nums(number, string));
+
+    $("#formletter").css("color",favColor);
+
+    $("#formletter").show();
+  });
+});
