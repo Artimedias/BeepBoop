@@ -1,12 +1,17 @@
 //biz
 
-input = 1
+input = 4;
+beeping = ("");
+beeping = printer(input, beeping);
+console.log(beeping)
 
-printer();
-
-function printer ()
+function printer (x, y)
 {
-    console.log("Beep")
+    for (i = 0; i < x; i++)
+    {
+        y += ("beep")
+    }
+  return y;
 }
 
 
