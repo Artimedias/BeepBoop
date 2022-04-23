@@ -1,34 +1,50 @@
 //biz
 
-input = 12;
+input = 15;
 beeping = ("");
 beeping = printer(input, beeping);
 console.log(beeping)
 
-function printer (x, y)
+function printer (input, output)
 {
-    for (i = 0; i < (x + 1); i++)
+    for (i = 0; i < (input + 1); i++)
     {
-        let z = i.toString();
-        for (h = 0; h < z.length; h++)
+        let number = i.toString();
+        currentNumber = [];
+        currentNumber = sorter(currentNumber, number);
+
+        for (h = 0; h < currentNumber.length; h++)
         {
-        d = z.charAt(h);
-        nope = 0;
-            if (d === ("1") && d!==(0))
+        currentDigit = currentNumber.charAt(h);
+						
+            if (currentDigit === ("2"))
             {
-                y += ("beep")
+                output += ("boop")
+                break;
+            }
+            else if (currentDigit === ("1"))
+            {
+                output += ("beep")
                 break;
             }
             else
             {
-                nope += 1;
+
             }
-        y += (z)
+        output += (currentNumber)
         }
     }
-  return y;
+  return output;
 }
 
+function sorter (array, string)
+{
+	for (i = 0; i < string.length; i++)
+  {
+  	array.push(string.charAt(i))
+    parseInt(array(i));
+  }
+}
 
 //user
 

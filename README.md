@@ -113,3 +113,47 @@ Expected Result: beep23456789beepbeepbeep
 Test Failed
 Reason: Stops running 1 time early
 Solution: Have i run an extra time
+
+Test 5: if the number has a two, print out a boop
+
+Code:
+
+input = 15;
+beeping = ("");
+beeping = printer(input, beeping);
+console.log(beeping)
+
+function printer (x, y)
+{
+    for (i = 0; i < (x + 1); i++)
+    {
+        let z = i.toString();
+        for (h = 0; h < z.length; h++)
+        {
+        d = z.charAt(h);
+        nope = 0;
+            if (d === ("2"))
+            {
+                y += ("boop")
+                break;
+            }
+            else if (d === ("1"))
+            {
+                y += ("beep")
+                break;
+            }
+            else
+            {
+                nope += 1;
+            }
+        y += (z)
+        }
+    }
+  return y;
+}
+
+Expected Result: 0beepboop3456789beepbeepboopbeepbeepbeep
+Test Failed
+Reason: Since 12 has a 1 before the two, it breaks out of the loop before it reaches the two
+Solution: 
+
