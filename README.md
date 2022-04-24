@@ -155,5 +155,5 @@ function printer (x, y)
 Expected Result: 0beepboop3456789beepbeepboopbeepbeepbeep
 Test Failed
 Reason: Since 12 has a 1 before the two, it breaks out of the loop before it reaches the two
-Solution: 
+Solution: Fundemental Issue. Rewritting
 
