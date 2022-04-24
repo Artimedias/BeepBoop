@@ -1,3 +1,35 @@
+###Application Name: 
+beepboop.html
+
+###Name of Contributor: 
+Brett Roper.
+
+###Description of Application: 
+A webpage that will take in an int that the user inputs, and print out a statement with a series of beeps, boops, and friendly requests.
+
+###Link to github repository: 
+[Here](https://github.com/Artimedias/BeepBoop)
+
+###Technologies Used: 
+VSCode, jQuery, Bootstrap, Gitbash.
+
+###Setup/Installation: 
+Clone this repository to wherever you wish, then open beepboop.html in your preferred web browser
+
+###Known Bugs: 
+None
+
+###License: 
+Copyright 2022 Brett Roper
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
 Tests
 
 Test 1: printer should return a beep
@@ -155,5 +187,60 @@ function printer (x, y)
 Expected Result: 0beepboop3456789beepbeepboopbeepbeepbeep
 Test Failed
 Reason: Since 12 has a 1 before the two, it breaks out of the loop before it reaches the two
-Solution: Fundemental Issue. Rewritting
+Solution: Made it so that the thing that finds out if it has a two or a 1 is seperate from the thing that finally decides what to print out
+
+Test 6: Printer should print out Won't you be my neighbor for 3s in addition to the previous requirements
+
+Code
+
+input = 15;
+beeping = ("");
+beeping = printer(input, beeping);
+console.log(beeping)
+
+function printer (x, y)
+{
+for (i = 0; i < (x + 1); i++)
+    {
+    let z = i.toString();
+    let a = 0;
+    for (h = 0; h < z.length; h++)
+        {
+        
+        d = z.charAt(h);
+        if (d === ("3"))
+            {
+            a = 3;
+            }
+        else if (d === ("2"))
+            {
+            a = 2;
+            }
+        else if (d === ("1"))
+            {
+            a = 1;
+            }
+            
+        }
+    if (a === 3)
+    {
+        y+= ("Won't you be my neighbor?")
+    }      
+    else if (a === 2)
+    {
+        y+= ("boop")
+    }
+    else if (a === 1)
+    {
+        y+= ("beep")
+    }
+    else
+    {
+        y+= (z);
+    }
+    }
+return y;
+}
+
+Expected Result: 0 beep boop Won't you be my neighbor 4 5 6 7 8 9 beep beep boop Won't you be my neighbor beep beep
 
